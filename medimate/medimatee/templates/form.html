@@ -1,0 +1,27 @@
+<form method="POST" action="{% url 'submit_form' %}">
+  <!-- Yo chai django ko template ho jasle garda chai hamrp form chai submit_form vanne function ma janxa-->
+  {% csrf_token %}
+  <!--This is for prevention of cross site forgery-->
+
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="name" placeholder="Enter your good name" />
+  <br />
+
+  <label for="age">Age:</label>
+  <input type="number" name="age" id="age" />
+  <br />
+
+  <label for="sex">Sex:</label>
+  <input type="text" name="sex" id="sex" />
+  <br />
+
+  <label for="family_id">Family id:</label>
+  <input type="text" name="family_id" id="family_id" />
+  <br />
+
+  <label for="show_age">Show age?</label>
+  <input type="checkbox" name="show_age" id="show_age" checked />
+  <br />
+
+  <button type="submit">Submit</button>
+</form>

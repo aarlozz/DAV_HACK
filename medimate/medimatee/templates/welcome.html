@@ -1,0 +1,9 @@
+<h2>Welcome {{member.name}}</h2>
+
+<p>Your sex is {{member.sex}}</p>
+
+{% if memeber.show_age %}
+<p>Your age is {{member.age}}</p>
+{% else %}
+<p>Your age is hidden</p>
+{% endif %}

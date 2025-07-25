@@ -1,0 +1,19 @@
+<p>Welcome! Your family id is {{ family_id }}</p>
+
+<div>
+  <!-- baisc harek filtered members ko data halney ho esma chai -->
+  {% if members %} {% for member in members %}
+  <p>Name: {{ member.name }}</p>
+  <p>Sex: {{ member.sex }}</p>
+  <!-- If age show garyo vane -->
+  {% if member.show_age %}
+  <p>Age: {{ member.age }}</p>
+  {% else %}
+  <p>Age: Hidden</p>
+  {% endif %}
+  <hr />
+  {% endfor %} {% else %}
+  <!-- aaba if empty xa vane no family vanera dekhaunu paryo -->
+  <p>No members found</p>
+  {% endif %}
+</div>
